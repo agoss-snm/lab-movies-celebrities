@@ -1,5 +1,3 @@
-//  Add your code here
-
 const { Schema, model } = require('mongoose');
 
 const celebritySchema = new Schema(
