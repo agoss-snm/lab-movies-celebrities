@@ -6,3 +6,66 @@ body {
 a {
   color: #00b7ff;
 }
+
+#buttonSend{
+  font-size: 2vh;
+  height: 7vh;
+  color:#153f44;
+  background-color: cadetblue;
+  border: none;
+  border-radius: 10px;
+}
+
+p{
+  font-size: 16px;
+  color: cadetblue;
+}
+
+.title{
+  color: #153f44;
+  padding: 3vh;
+}
+
+span{
+  color: rgb(223, 53, 81);
+}
+
+h3{
+  color: orangered;
+}
+
+.buttonBack{
+  font-size: 2vh;
+  color:#153f44;
+  padding: 2vh;
+  background-color: cadetblue;
+  border: none;
+  border-radius: 10px;
+  margin-top: 4vh;
+  width: 30vh;
+  text-align: center;
+}
+
+
+.card-group {
+  border-radius: 10px;
+}
+.card-group>.card:not(:last-child) {
+  border-radius: 10px;
+}
+.card-group>.card:not(:first-child) {
+  border-top-left-radius: 10px; 
+  border-bottom-left-radius: 10px;
+}
+
+.linkLayout{
+  color: white;
+  text-decoration: none;
+}
+
+.card{
+  border-color: pink;
+}
+.card-group {
+  justify-content: center;
+}

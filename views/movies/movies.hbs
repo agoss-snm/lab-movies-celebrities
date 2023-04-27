@@ -1,0 +1,31 @@
+ <div class="container text-center">
+ <div class="title">
+        <h1>List of Movies</h1>
+    </div>
+
+<div class="container text-center">
+   
+        <div class="row align-items-start">
+            {{#each movies}}
+            <div class="col-6 p-2">
+                <div class=" card">
+                    <p class="card-text"> Title: {{this.title}}</p>
+                    <p class="card-text"> Genre: {{this.genre}}</p>
+                    <p class="card-text"> Plot: {{this.plot}}</p>
+                    <p class="card-text"> Cast: {{this.cast}}</p>
+                </div>
+                <a href="/movies/{{id}}/edit">Edit</a>
+        <a href="/movies/{{id}}" rel="noopener noreferrer">See More</a>
+
+        <!-- Delete post-->
+        <form action="/movies/{{id}}/delete" method="POST">
+      <button class="deleteButton">Delete</button>
+    </form>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+
+<a href="/" class="buttonBack"> &#10094 Back</a>
+ </div>
