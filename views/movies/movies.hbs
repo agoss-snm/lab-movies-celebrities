@@ -1,31 +1,33 @@
- <div class="container text-center">
- <div class="title">
+<div class="container text-center">
+    <div class="title">
         <h1>List of Movies</h1>
     </div>
 
-<div class="container text-center">
-   
+    <div class="container text-center">
+
         <div class="row align-items-start">
             {{#each movies}}
             <div class="col-6 p-2">
-                <div class=" card">
-                    <p class="card-text"> Title: {{this.title}}</p>
-                    <p class="card-text"> Genre: {{this.genre}}</p>
-                    <p class="card-text"> Plot: {{this.plot}}</p>
-                    <p class="card-text"> Cast: {{this.cast}}</p>
-                </div>
-                <a href="/movies/{{id}}/edit">Edit</a>
-        <a href="/movies/{{id}}" rel="noopener noreferrer">See More</a>
+                <div class="card text-dark bg-light p-3">
+                    <p class="card-text"> <strong>Title:</strong> {{this.title}}</p>
+                    <p class="card-text"> <strong>Genre:</strong> {{this.genre}}</p>
+                    <p class="card-text"><strong>Plot:</strong> {{this.plot}}</p>
+                    <p class="card-text"> <strong>Cast:</strong> {{this.cast}}</p>
+                    <div class="container p-3">
+                        <a href="/movies/{{id}}/edit" class="link-success linkT">Edit</a>
+                        <a href="/movies/{{id}}" class="link-primary linkT">See More</a>
 
-        <!-- Delete post-->
-        <form action="/movies/{{id}}/delete" method="POST">
-      <button class="deleteButton">Delete</button>
-    </form>
+                    </div>
+                    <form action="/movies/{{id}}/delete" method="POST">
+                        <button type="bnt btn-danger">Delete</button>
+                    </form>
+                </div>
             </div>
             {{/each}}
         </div>
     </div>
 
-
-<a href="/" class="buttonBack"> &#10094 Back</a>
- </div>
+<div class="container mt-3">
+    <a href="/" class="buttonBack"> &#10094 Back</a>
+    </div>
+</div>

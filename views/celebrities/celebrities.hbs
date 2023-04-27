@@ -1,22 +1,32 @@
- <div class="container text-center">
+<div class="container text-center">
     <div class="title">
         <h1>List of celebrities</h1>
     </div>
+
     <div class="container text-center">
+
         <div class="row align-items-start">
             {{#each celebrities}}
-            <div class="col-3 p-2">
-                <div class=" card">
+            <div class="col-6 p-2">
+                <div class="card text-dark bg-light p-3">
                     <p class="card-text"> <span>Name: &#10137</span>{{this.name}}</p>
                     <p class="card-text"> 	&#12336 <span>Ocupattion:</span> {{this.occupation}}</p>
                     <p><span>Catch Phrase: </span>{{this.catchPhrase}}  &#11088</p>
+                    <div class="container p-3">
+                        <a href="/celebrities/{{id}}/edit" class="link-success linkT">Edit</a>
+                        <a href="/celebrities/{{id}}" class="link-primary linkT">See More</a>
+
+                    </div>
+                    <form action="/celebrities/{{id}}/delete" method="POST">
+                        <button type="bnt btn-danger">Delete</button>
+                    </form>
                 </div>
             </div>
             {{/each}}
         </div>
     </div>
-    <br>
-    <div class="container">
-        <a href="/" class="buttonBack">	&#10094 Back</a>
+
+<div class="container mt-3">
+    <a href="/" class="buttonBack"> &#10094 Back</a>
     </div>
-    </div>
+</div>

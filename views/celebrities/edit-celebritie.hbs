@@ -1,0 +1,25 @@
+<div class="container text-center">
+       <h2>Edit the celebritie: {{celebritie.name}}</h2>
+    <form action="/celebrities/{{celebritie.id}}/edit" method="post">
+  <div class="mb-3">
+    <label class="form-label">Name:</label>
+    <input type="text" class="form-control" name="name" value="{{celebritie.name}}" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Ocupattion:</label>
+    <input type="text" class="form-control" name="occupation" value="{{celebritie.occupation}}" />
+  </div>
+  <div class="mb-3 ">
+    <label class="form-label" >Plot:</label>
+    <input type="text" class="form-control" name="catchPhrase" value="{{celebritie.catchPhrase}}" />
+  </div>
+  <button type="submit" class="btn btn-primary">Save changes</button>
+</form>
+<br>
+    <div class="container mt-3">   
+        <a href="/" class="buttonBack">&#10094 Back</a>
+    </div>
+</div>
+</div>
+
+ 
