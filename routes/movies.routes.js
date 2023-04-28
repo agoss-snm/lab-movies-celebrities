@@ -9,7 +9,7 @@ router.get('/movies', (req, res, next) => {
         res.render ('movies/movies', {movies: allMovies});
     })
     .catch(error => {
-        console.log('Error while getting the books from the DB: ', error);
+        console.log('Error while getting the movies from the DB: ', error);
         next(error);
       });
 });
@@ -23,7 +23,7 @@ router.get('/movies/:id', (req, res, next) => {
     Movie.findById(id)
       .then(theMovie => res.render('movies/movie.details.hbs', { movie: theMovie }))
       .catch(error => {
-        console.log('Error while retrieving book details: ', error);
+        console.log('Error while retrieving movie details: ', error);
         next(error);
       });
   });
